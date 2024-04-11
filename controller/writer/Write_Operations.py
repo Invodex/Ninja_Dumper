@@ -104,7 +104,11 @@ def open_file_to_bytearray(file_path):
 
 def insert_zeros_to_meet_size_raw(file_path, size_raw, distance_from_end=0x50):
     """
-    Function responsible for allocating memory for Binary Ninja, enabling the allocation of all data extracted from the virtual memory allocated by the dumped process and loading it into Binary Ninja. This method was devised as a solution to load more data into the database. When attempting to load all memory data into the database, Binary Ninja would not allow creating segments or writing more than the size of the opened file. Therefore, this function was created to perform the "allocation" :)
+    Function responsible for allocating memory for Binary Ninja, 
+    enabling the allocation of all data extracted from the virtual memory allocated by the dumped process and loading it into Binary Ninja. 
+    This method was devised as a solution to load more data into the database. When attempting to load all memory data into the database, 
+    Binary Ninja would not allow creating segments or writing more than the size of the opened file. 
+    Therefore, this function was created to perform the "allocation" :)
 
     ARG1|file_path: Path to the file
     ARG2|size_raw: Amount of memory to "allocate" in the file

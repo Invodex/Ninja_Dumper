@@ -51,7 +51,8 @@ class SubprocessController:
 
 def get_paths_bin(path):
     """
-    Function responsible for receiving the path to the plugin folder and returning the path to the WinDbg binary. This function will be refactored in the future to use the binary from Binary Ninja itself.
+    Function responsible for receiving the path to the plugin folder and returning the path to the WinDbg binary. 
+    This function will be refactored in the future to use the binary from Binary Ninja itself.
 
     ARG1|path to the plugin folder
 
@@ -189,7 +190,8 @@ def list_va(inst_class):
 
 def get_stack(inst_class):
     """
-    Function responsible for capturing the stack trace of the dumped program and returning a list with the flow of called functions and information about the functions' return.
+    Function responsible for capturing the stack trace of the dumped program and returning a list with the flow of called functions and information 
+    about the functions return.
 
     ARG1|inst_class: Class containing the open pipe to the cdb process.
 
@@ -362,7 +364,8 @@ def export_structured_module(inst_class,addr_base,addr_end,path,name,exte):
 
 def get_main_mod(inst_class):
     """
-    Function responsible for identifying the executable responsible for creating the process: main module. The function traverses the Process Environment Block (PEB) to locate the process's image PATH.
+    Function responsible for identifying the executable responsible for creating the process: main module. 
+    The function traverses the Process Environment Block (PEB) to locate the process's image PATH.
     
     ARG1|inst_class: Class containing the open pipe to the cdb process.
 
