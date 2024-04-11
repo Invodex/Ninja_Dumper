@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>smfxdbg</Name>
+    <Version>$#Engine_version#$</Version>
+    <Components>
+        <BinaryComponent Name="smfxdbg" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\smfxdbg.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <EngineCommands>
+              <EngineCommand Name="smfx_machine">
+                  <EngineCommandItem>
+                      <Syntax>!smfx_machine</Syntax>
+                      <Description>Dumps the state machine's event queue, transition history, and current state of the engine.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="smfx_tablesize">
+                  <EngineCommandItem>
+                      <Syntax>!smfx_tablesize</Syntax>
+                      <Description>Calculates the total size of all state machine transition tables in a given module.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="smfx_machine2">
+                  <EngineCommandItem>
+                      <Syntax>!smfx_machine2</Syntax>
+                      <Description>Similar to !smfx_machine, but takes the pointer value in the m_engine.m_impl field of the generated state machine class.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+            </EngineCommands>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

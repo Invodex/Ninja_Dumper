@@ -1,0 +1,63 @@
+MSC_WARNING_LEVEL=/W4 /WX
+
+TARGETNAME=ExdiKdSample
+TARGETTYPE=DYNLINK
+TARGET_DESTINATION = dbg\exdi:dbg\test
+
+MIDL_FLAGS=$(MIDL_FLAGS) /I ..\..\..\..\external\exdi
+
+_NT_TARGET_VERSION=$(_NT_TARGET_VERSION_WIN7)
+
+USE_LIBCMT=1
+USE_NATIVE_EH=1
+USE_STL=1
+STL_VER=100
+USE_DEFAULT_WIN32_LIBS = 0 # prevent kernel32.dll, advapi32.dll, etc. from being linked in automatically
+USE_DEFAULT_GUI32_LIBS = 0
+BUILD_FOR_CORESYSTEM=1
+
+USE_ATL=1
+ATL_VER=70
+!if "$(DBGSDK_REF_PATH)" == ""
+DBGSDK_REF_PATH=$(SDKTOOLS_REF_PATH)
+!endif
+
+C_DEFINES=$(C_DEFINES) -D_ATL_EXCEPTIONS -D_ATL_ATTRIBUTES
+
+SOURCES=\
+	dllmain.cpp \
+	ExdiKdSample.idl \
+	ExdiKdSample.cpp \
+	LiveExdiSampleServer.cpp \
+	StaticExdiSampleServer.cpp  \
+	$(O)\ExdiKdSample_i.c \
+	ExdiKdSample.rc	\
+
+TARGETLIBS=\
+    $(ONECORE_INTERNAL_PRIV_SDK_LIB_VPATH_L)\onecore_internal.lib \
+	$(ONECORE_INTERNAL_SDK_LIB_PATH)\onecoreuuid.lib \
+	$(PROJECT_OBJ_ROOT)\debuggers\samples\exdi\ExdiKdSample\KdControllerLib\$(O)\KdControllerLib.lib \
+    $(ONECORE_EXTERNAL_SDK_LIB_PATH)\onecore_downlevel.lib \
+    $(ONECORE_EXTERNAL_SDK_LIB_PATH)\oleaut32.lib \
+    $(ONECORE_EXTERNAL_SDK_LIB_PATH)\atls.lib \
+
+INCLUDES = \
+    ..\KDControllerLib; \
+    $(INCLUDES) \
+    $(OBJ_PATH)\$O; \
+    $(ONECOREBASE_INC_PATH); \
+    $(ONECORECOM_INC_PATH); \
+    $(INTERNAL_SDK_LIB_PATH);\
+    $(ONECORECOM_PRIVATE_INC_PATH_L); \
+
+PASS0_BINPLACE = \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample *.cpp \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample *.h \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample *.rgs \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample *.txt \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample ExdiKdSample.* \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample product.* \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\ExdiKdSample sources \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample ..\dirs \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample ..\ExdiKdSample.sln \
+    -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample ..\readme.docx \

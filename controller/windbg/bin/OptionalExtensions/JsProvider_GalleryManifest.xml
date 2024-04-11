@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>JsProvider</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>6.13.16.2161</MinDebuggerSupported>
+    <Description>JavaScript Script Provider Extension</Description>
+    <Components>
+        <BinaryComponent Name="JsProvider" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\JsProvider.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <ScriptProviders>
+                <ScriptProvider Name="JavaScript" Extension="js">
+                    <Template IsDefault="Yes">
+                        <Name>
+                            <![CDATA[Extension Script]]>
+                        </Name>
+                        <Description>
+                            <![CDATA[Use this template to help you extend objects in the debugger through the data model.]]>
+                        </Description>
+                        <Content>
+                            <![CDATA["use strict"
+
+function initializeScript()
+{
+//
+// Return an array of registration objects to modify the object model of the debugger
+// See the following for more details:
+//
+//     https://aka.ms/JsDbgExt
+//
+return [];
+}]]>
+                        </Content>
+                    </Template>
+                    <Template>
+                        <Name>
+                            <![CDATA[Imperative Script]]>
+                        </Name>
+                        <Description>
+                            <![CDATA[Use this template to create a script that can be invoked to run an arbitrary set of debugger commands.]]>
+                        </Description>
+                        <Content>
+                            <![CDATA["use strict"
+
+function initializeScript()
+{
+// Insert your script content here.  This method will be called whenever the script is
+// invoked from a client.
+//
+// See the following for more details:
+//
+//     https://aka.ms/JsDbgExt
+}]]>
+                        </Content>
+                    </Template>
+                </ScriptProvider>
+            </ScriptProviders>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

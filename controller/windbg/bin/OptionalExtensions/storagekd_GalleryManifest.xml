@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>storagekd</Name>
+    <Version>$#Engine_version#$</Version>
+    <Components>
+        <BinaryComponent Name="storagekd" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\storagekd.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <EngineCommands>
+                <EngineCommand Name="storlogirp">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!storlogirp <args>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Displays internal log entries referencing the specified IRP.
+Usage: !storlogirp ADAPTER-EXTENSION <irp> [<starting_entry>] [<ending_entry>] [L <count>]
+   !storlogirp <irp> [<starting_entry>] [<ending_entry>] [L <count>]
+See '!storhelp storloglist' for details.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="storloglist">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!storloglist <args>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Displays internal log entries.
+Usage: !storloglist ADAPTER-EXTENSION [<starting_entry>[ <ending_entry>]] [L <count>]
+   !storloglist [<starting_entry>[ <ending_entry>]] [L <count>]
+See '!storhelp storloglist' for details.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="storlogsrb">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!storlogsrb <args>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Displays internal log entries referencing the specified SRB.
+Usage: !storlogsrb ADPATER-EXTENSION <srb> [<starting_entry>] [<ending_entry>] [L <count>]
+   !storlogsrb <srb> [<starting_entry>] [<ending_entry>] [L <count>]
+See '!storhelp storlogsrb' for details.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="storsrb">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!storsrb <args>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Displays details for the specified SCSI or STORAGE request block.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="storahci">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!storahci <unit object> [detail]]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Provides detailed information about storahci device.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+                <EngineCommand Name="storreadsector">
+                    <EngineCommandItem>
+                        <Syntax>
+<![CDATA[!storreadsector <unit object> <starting sector #>]]>
+                        </Syntax>
+                        <Description>
+<![CDATA[Reads the specified sector content from a disk.
+NOTE: This only works for disks managed by storahci and the sector size should be 512 bytes.]]>
+                        </Description>
+                    </EngineCommandItem>
+                </EngineCommand>
+            </EngineCommands>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

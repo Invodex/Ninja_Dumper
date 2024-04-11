@@ -1,0 +1,109 @@
+NOTICES AND INFORMATION
+Do Not Translate or Localize
+
+This software incorporates material from third parties.
+Microsoft makes certain open source code available at https://3rdpartysource.microsoft.com,
+or you may send a check or money order for US $5.00, including the product name,
+the open source component name, and version number, to:
+
+Source Code Compliance Team
+Microsoft Corporation
+One Microsoft Way
+Redmond, WA 98052
+USA
+
+Notwithstanding any other terms, you may reverse engineer this software to the extent
+required to debug changes to any libraries licensed under the GNU Lesser General Public License.
+
+
+-------------------------------------------------------------------
+
+microsoft/chakracore 7cbf6fec4d152ce06b165e7fd7c4018863e1bda3 - MIT
+(c) by Google.
+(c) by Mozilla.
+ToCanonical (c) Chars
+(c) 2005 Bob Ippolito.
+(c) 2011 - Grant Galitz
+(c) 2012 - Grant Galitz
+Copyright (c) Microsoft.
+Copyright (c) 2005 Tom Wu
+Copyright (c) Rich Moore.
+Copyright 2010 Almer Thie.
+Copyright 2012 Onan Games.
+(c) When MarkCurrentMatched
+(c) 2005-2007 Sam Stephenson
+Copyright 2010 Corban Brook.
+(c) Copyright IBM Corp. 2003.
+Copyright (c) 2007 Apple Inc.
+Copyright (c) 2014 Apple Inc.
+Copyright (c) 2015 Apple Inc.
+Copyright 2008 the V8 project
+Copyright 2009 the V8 project
+Copyright 2010 Ricard Marxer.
+Copyright 2010 the V8 project
+Copyright 2013 the V8 project
+Copyright (c) 2003-2005 Tom Wu
+Copyright (c) 2004 Baron Schwartz
+Copyright 2009 Charles J. Cliffe.
+Copyright 2014 Mozilla Foundation
+copyright 2014 Mozilla Foundation
+Copyright (c) 2013, the V8 project
+Copyright 2006-2008 the V8 project
+Copyright 2009 The Closure Library
+Copyright 2012 The Closure Library
+Portions copyright 2013 Google, Inc
+(c) Copyright 2005 Intel Corporation
+(c) Copyright 2006 Intel Corporation
+Copyright (C ) Microsoft Corporation
+Copyright (c) Microsoft Corporation.
+Portions copyright 2012 Google, Inc.
+Copyright (c) 2010 Mozilla Foundation
+Copyright (c) 2004 by Arthur Langereis
+Copyright (c) 2010 - 2012 Grant Galitz
+Copyright (c) Caldera International Inc.
+(c) Copyright 2005-2006 Intel Corporation
+Copyright (c) 2000 the Initial Developer.
+Copyright (c) 2007 John Resig (jquery.com)
+Copyright (c) 2001-2010, Purdue University.
+Copyright 2013 the Octane Benchmark project
+Portions copyright 2011 Mozilla Foundation.
+Copyright (c) 2004-2007, The Dojo Foundation
+Copyright 1996 John Maloney and Mario Wolczko.
+Copyright 2009 Oliver Hunt 
+Copyright (c) 2012 John Resig, http://jquery.com
+Copyright 2006, 2010 The Apache Software Foundation.
+Copyright (c) Microsoft Corporation and contributors.
+Copyright (c) 1995-2013 Jean-loup Gailly and Mark Adler
+Copyright (c) 2006-2007 Erin Catto http://www.gphysics.com
+(c) Copyright 1997,2004 International Business Machines Corporation.
+Copyright (c) 2003, 2004, 2005 University of Illinois at Urbana-Champaign.
+Copyright (c) 2008 Jacob Seidelin, jseidelin@nihilogic.dk, http://blog.nihilogic.dk
+Copyright Paul Johnston 2000 - 2002. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet
+Copyright (c) Paul Johnston 1999 - 2002. Other contributors Greg Holt, Andrew Kepert, Ydnar, Lostinet
+
+ChakraCore
+The MIT License (MIT)
+
+Copyright (c) Microsoft Corporation
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+-------------------------------------------------------------------
+

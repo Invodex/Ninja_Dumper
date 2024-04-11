@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>usb4kd</Name>
+    <Version>$#Engine_version#$</Version>
+    <Components>
+        <BinaryComponent Name="usb4kd" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\usb4kd.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <EngineCommands>
+              <EngineCommand Name="usb4adapter">
+                  <EngineCommandItem>
+                      <Syntax>!usb4adapter</Syntax>
+                      <Description>Dumps information about the USB4 Adapter</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4devicerouter">
+                  <EngineCommandItem>
+                      <Syntax>!usb4devicerouter</Syntax>
+                      <Description>Dumps information about the USB4 Device Router</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4help">
+                  <EngineCommandItem>
+                      <Syntax>!usb4help</Syntax>
+                      <Description>Displays information on available extension commands.  Alias to !usb4kd.help</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4hostrouter">
+                  <EngineCommandItem>
+                      <Syntax>!usb4hostrouter</Syntax>
+                      <Description>Dumps information about the USB4 Host Router</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4port">
+                  <EngineCommandItem>
+                      <Syntax>!usb4port</Syntax>
+                      <Description>Dumps information about the USB4 Port</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4rbcsregisters">
+                  <EngineCommandItem>
+                      <Syntax>!usb4rbcsregisters</Syntax>
+                      <Description>Dumps registers from the USB4 Router Basic Configuration Space</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4tunnel">
+                  <EngineCommandItem>
+                      <Syntax>!usb4tunnel</Syntax>
+                      <Description>Dumps information about the USB4 Tunnel</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4tunnels">
+                  <EngineCommandItem>
+                      <Syntax>!usb4tunnels</Syntax>
+                      <Description>Dumps information about all USB4 Tunnels</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4tree">
+                  <EngineCommandItem>
+                      <Syntax>!usb4tree</Syntax>
+                      <Description>Dumps USB4 hierarchy of routers and ports</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4treeall">
+                  <EngineCommandItem>
+                      <Syntax>!usb4treeall</Syntax>
+                      <Description>Dumps USB4 hierarchy of routers and ports with all switches enabled</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="usb4view">
+                  <EngineCommandItem>
+                      <Syntax>!usb4view</Syntax>
+                      <Description>Dumps USB4 hierarchy of routers and ports and opens in Usb4View visualizer</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+            </EngineCommands>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

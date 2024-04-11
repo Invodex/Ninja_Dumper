@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>DbgModelApiXtn</Name>
+    <Version>$#Engine_version#$</Version>
+    <MinDebuggerSupported>10.0.17069.1001</MinDebuggerSupported>
+    <Description>Provides a set of APIs for other extensions to consume</Description>
+    <Components>
+        <BinaryComponent Name="DbgModelApiXtn" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\DbgModelApiXtn.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <ObjectExtensionList>
+                <NamedExtension Name="Debugger.Models.Utility" Namespace="Debugger.Models.Utility.FileSystem" Property="FileSystem" />
+                <NamedExtension Name="Debugger.Models.Utility" Namespace="Debugger.Models.Utility.Code" Property="Code" />
+                <NamedExtension Name="Debugger.Models.Utility" Namespace="Debugger.Models.Utility.Collections" Property="Collections" />
+            </ObjectExtensionList>
+        </BinaryComponent>
+        <ScriptComponent Name="CodeFlow" Type="Engine" File="winext\ApiExtension\CodeFlow.js" FilePathKind="RepositoryRelative">
+            <FunctionAliases>
+                <FunctionAlias Name="dflow">
+                    <AliasItem>
+                        <Syntax>
+                            <![CDATA[!dflow [<address>]]]>
+                        </Syntax>
+                        <Description>
+                            <![CDATA[Shows the instructions of the function containing [<address>] which influence the source operands of that instruction.]]>
+                        </Description>
+                    </AliasItem>
+                </FunctionAlias>
+                <FunctionAlias Name="dis">
+                    <AliasItem>
+                        <Syntax>
+                            <![CDATA[!dis [<address>]]]>
+                        </Syntax>
+                        <Description>
+                            <![CDATA[Disassembles instructions starting at [<address>] using the data model disassembler.]]>
+                        </Description>
+                    </AliasItem>
+                </FunctionAlias>
+            </FunctionAliases>
+            <ObjectExtensionList>
+                <NamedExtension Name="Debugger.Models.Utility" Namespace="Debugger.Models.Utility.Code" Property="Code" />
+                <NamedExtension Name="Debugger.Models.Utility.Code.Instruction" />
+            </ObjectExtensionList>
+        </ScriptComponent>
+        <ScriptComponent Name="SynTypes" Type="Engine" File="winext\ApiExtension\SynTypes.js" FilePathKind="RepositoryRelative">
+            <ObjectExtensionList>
+                <NamedExtension Name="Debugger.Models.Utility" Namespace="Debugger.Models.Utility.Analysis" Property="Analysis" />
+            </ObjectExtensionList>
+        </ScriptComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>

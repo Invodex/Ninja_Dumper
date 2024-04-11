@@ -1,0 +1,26 @@
+MSC_WARNING_LEVEL=/W4 /WX
+
+TARGETNAME=KdControllerLib
+TARGETTYPE=LIBRARY
+
+!if "$(DBGSDK_REF_PATH)" == ""
+DBGSDK_REF_PATH=$(SDKTOOLS_REF_PATH)
+!endif
+
+USE_LIBCMT=1
+USE_NATIVE_EH=1
+USE_STL=1
+STL_VER=100
+USE_DEFAULT_WIN32_LIBS = 0 # prevent kernel32.dll, advapi32.dll, etc. from being linked in automatically
+
+SOURCES=\
+    AsynchronousKdController.cpp \
+	BufferedStreamReader.cpp \
+	KDController.cpp 
+
+PASS0_BINPLACE = \
+                 -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\KdControllerLib *.cpp \
+                 -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\KdControllerLib *.h \
+                 -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\KdControllerLib KDController.* \
+                 -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\KdControllerLib KdControllerLib.* \
+                 -:DEST $(DBG_PRI_LAYOUT)\sdk\samples\exdi\ExdiKdSample\KdControllerLib sources \

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ExtensionPackages Version="1.0.0.0" Compression="none">
+<ExtensionPackage>
+    <Name>wdfkd</Name>
+    <Version>$#Engine_version#$</Version>
+    <Components>
+        <BinaryComponent Name="wdfkd" Type="Engine">
+            <Files>
+                <File Architecture="Any" Module="winext\wdfkd.dll" FilePathKind="RepositoryRelative"/>
+            </Files>
+            <LoadTriggers>
+                <!-- The extension will load on any Windows kernel. -->
+                <TriggerSet>
+                    <OSTrigger Name="Windows" />
+                    <TargetTrigger Type="Kernel" />
+                </TriggerSet>
+            </LoadTriggers>
+            <EngineCommands>
+              <EngineCommand Name="wdfcollection">
+                  <EngineCommandItem>
+                      <Syntax>!wdfcollection</Syntax>
+                      <Description>Dumps all the objects stored in the collection</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfcommonbuffer">
+                  <EngineCommandItem>
+                      <Syntax>!wdfcommonbuffer</Syntax>
+                      <Description>Dump information about WDFCOMMONBUFFER</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfchildlist">
+                  <EngineCommandItem>
+                      <Syntax>!wdfchildlist</Syntax>
+                      <Description>Dumps the state of all the reported device descriptions in the list</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfcrashdump">
+                  <EngineCommandItem>
+                      <Syntax>!wdfcrashdump</Syntax>
+                      <Description>Used with user mode minidumps to display captured log and loader information</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdevext">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdevext</Syntax>
+                      <Description>Dumps the WDFDEVICE handle related to the device extension</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdevice">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdevice</Syntax>
+                      <Description>Dumps information and state of the WDFDEVICE handle</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdeviceinterrupts">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdeviceinterrupts</Syntax>
+                      <Description>Dumps device interrupts.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdevicequeues">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdevicequeues</Syntax>
+                      <Description>Dumps information about all the WDFQUEUE's of WDFDEVICE</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdmaenabler">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdmaenabler</Syntax>
+                      <Description>Dumps verbose information about WDFDMAENABLER and its transaction and common buffer objects</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdmaenablers">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdmaenablers</Syntax>
+                      <Description>Lists all dma-enablers and associated transaction and common buffer objects of WDFDEVICE handle</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdmatransaction">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdmatransaction</Syntax>
+                      <Description>Dumps information about WDFDMATRANSACTION</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfdriverinfo">
+                  <EngineCommandItem>
+                      <Syntax>!wdfdriverinfo</Syntax>
+                      <Description>Displays Wdf driver information, such as device tree and WDF Version Library levels</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfextendwatchdog">
+                  <EngineCommandItem>
+                      <Syntax>!wdfextendwatchdog</Syntax>
+                      <Description>Extends the watchdog timer to measure responsiveness during power transitions for devices which are not power pageable</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdffindobjects">
+                  <EngineCommandItem>
+                      <Syntax>!wdffindobjects</Syntax>
+                      <Description>Searches the memory or registers for WDF objects</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfforwardprogress">
+                  <EngineCommandItem>
+                      <Syntax>!wdfforwardprogress</Syntax>
+                      <Description>Dumps information about forwardprogress for a queue which supports forward progress</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfgetdriver">
+                  <EngineCommandItem>
+                      <Syntax>!wdfgetdriver</Syntax>
+                      <Description>Echo the current default driver_name.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfhandle">
+                  <EngineCommandItem>
+                      <Syntax>!wdfhandle</Syntax>
+                      <Description>Dumps information about the handle, including the underlying framework object pointer</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfhelp">
+                  <EngineCommandItem>
+                      <Syntax>!wdfhelp</Syntax>
+                      <Description>Displays information on available extension commands.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfinterrupt">
+                  <EngineCommandItem>
+                      <Syntax>!wdfinterrupt</Syntax>
+                      <Description>Dumps information and state of the WDFINTERRUPT handle</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfiotarget">
+                  <EngineCommandItem>
+                      <Syntax>!wdfiotarget</Syntax>
+                      <Description>Dumps information and state of the WDFIOTARGET handle</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfldr">
+                  <EngineCommandItem>
+                      <Syntax>!wdfldr</Syntax>
+                      <Description>Prints information about the currently loaded KMDF and UMDF drivers or driver extensions.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdflogdump">
+                  <EngineCommandItem>
+                      <Syntax>!wdflogdump</Syntax>
+                      <Description>Prints the in-flight recorder log records for the named driver.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdflogsave">
+                  <EngineCommandItem>
+                      <Syntax>!wdflogsave</Syntax>
+                      <Description>Saves the WDF In-Flight Recorder log records for the named driver</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfmemory">
+                  <EngineCommandItem>
+                      <Syntax>!wdfmemory</Syntax>
+                      <Description>Dumps the underlying buffer pointer and size for the WDFMEMORY handle</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfobject">
+                  <EngineCommandItem>
+                      <Syntax>!wdfobject</Syntax>
+                      <Description>Dumps a WDFOBJECT</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfopenhandles">
+                  <EngineCommandItem>
+                      <Syntax>!wdfopenhandles</Syntax>
+                      <Description>Dumps information about all the handles opened on WDFDEVICE</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfpoolusage">
+                  <EngineCommandItem>
+                      <Syntax>!wdfpoolusage</Syntax>
+                      <Description>Dumps pool usage for the given driver_name</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfqueue">
+                  <EngineCommandItem>
+                      <Syntax>!wdfqueue</Syntax>
+                      <Description>Dumps information about WDFQUEUE</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfrequest">
+                  <EngineCommandItem>
+                      <Syntax>!wdfrequest</Syntax>
+                      <Description>Dumps information about WDFREQUEST</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfsearchpath">
+                  <EngineCommandItem>
+                      <Syntax>!wdfsearchpath</Syntax>
+                      <Description>Set the searchpath to the format files needed to format the WDF log records</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfsetdriver">
+                  <EngineCommandItem>
+                      <Syntax>!wdfsetdriver</Syntax>
+                      <Description>Set the default driver_name</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfsetlogdisplay">
+                  <EngineCommandItem>
+                      <Syntax>!wdfsetlogdisplay</Syntax>
+                      <Description>Set the log display mode</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfsettraceprefix">
+                  <EngineCommandItem>
+                      <Syntax>!wdfsettraceprefix</Syntax>
+                      <Description>Set the trace prefix format string</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfspinlock">
+                  <EngineCommandItem>
+                      <Syntax>!wdfspinlock</Syntax>
+                      <Description>Dumps the spin lock information and the history of the spin lock object if available</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdftagtracker">
+                  <EngineCommandItem>
+                      <Syntax>!wdftagtracker</Syntax>
+                      <Description>Dumps all outstanding tag information for the given tag tracker</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdftmffile">
+                  <EngineCommandItem>
+                      <Syntax>!wdftmffile</Syntax>
+                      <Description>Sets or clears the TMF file for formatting log.</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdftraceprtdebug">
+                  <EngineCommandItem>
+                      <Syntax>!wdftraceprtdebug</Syntax>
+                      <Description>Turns on the TracePrt diagnostic mode</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumdevstack">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumdevstack</Syntax>
+                      <Description>Dumps the UMDF Device stack</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumdevstacks">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumdevstacks</Syntax>
+                      <Description>Dumps UMDF Device stacks</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumdownirp">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumdownirp</Syntax>
+                      <Description>Prints the user mode file handle</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumfile">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumfile</Syntax>
+                      <Description>Dumps the UM file</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumirp">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumirp</Syntax>
+                      <Description>Dumps the UM IRP</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumirps">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumirps</Syntax>
+                      <Description>Dumps UM IRPs</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumrefhistory">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumrefhistory</Syntax>
+                      <Description>Dumps UMDF refcounting history</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfumtriage">
+                  <EngineCommandItem>
+                      <Syntax>!wdfumtriage</Syntax>
+                      <Description>Dumps triage information for UMDF</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfusbdevice">
+                  <EngineCommandItem>
+                      <Syntax>!wdfusbdevice</Syntax>
+                      <Description>Dumps a WDFUSBDEVICE I/O target</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfusbinterface">
+                  <EngineCommandItem>
+                      <Syntax>!wdfusbinterface</Syntax>
+                      <Description>Dumps a WDFUSBINTERFACE</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfusbpipe">
+                  <EngineCommandItem>
+                      <Syntax>!wdfusbpipe</Syntax>
+                      <Description>Dumps a WDFUSBPIPE I/O target</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+              <EngineCommand Name="wdfwmi">
+                  <EngineCommandItem>
+                      <Syntax>!wdfwmi</Syntax>
+                      <Description>Dumps WMI registration, provider and instance information</Description>
+                  </EngineCommandItem>
+              </EngineCommand>
+            </EngineCommands>
+        </BinaryComponent>
+    </Components>
+</ExtensionPackage>
+</ExtensionPackages>
