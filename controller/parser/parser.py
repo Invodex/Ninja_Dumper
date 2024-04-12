@@ -11,29 +11,28 @@ def va_info(memory_data):
     RET: None
 
     """
+    
+    width = 60
 
-    print("─" * 40 + "\n")
-    for item in memory_data:
-        area_name = item.split(':')[0].strip('{')
-        mem_info_start = item.find('{mem:') + 5
-        mem_info_end = item.find('}', mem_info_start)
-        mem_info = item[mem_info_start:mem_info_end].split(',')
+    for item_json in memory_data:
+        item = json.loads(item_json)
         
-        base = mem_info[0].split(':')[1]
-        end = mem_info[1].split(':')[1]
-        size = mem_info[2].split(':')[1]
-        
-        perm_info_start = item.find('{Protect:') + 1
-        perm_info_end = item.find('}', perm_info_start)
-        perm_info = item[perm_info_start:perm_info_end].replace('"', '').split(',')
-        
-        protect = perm_info[0].split(':')[1]
-        alloc_protect = perm_info[1].split(':')[1]
+        for debug_area, details in item.items():
+            mem = details['mem']
+            perm = details['perm']
 
-        print(f"Area: {area_name}")
-        print(f"Base: {base}, End: {end}, Size: {size}")
-        print(f"Permissions: Protect = {protect}, Allocation Protect = {alloc_protect}")
-        print("─" * 40 + "\n")
+            base_line = f" Base: {mem['base']} | End: {mem['end']}"
+            size_line = f" Size: {mem['size']}"
+            protect_line = f" Protect: {perm['Protect']}"
+            alloc_prot_line = f" Alloc Protect: {perm['Allocation_Protect']}"
+
+            print(f"Area: {debug_area}")
+            print(f"┌{'─' * width}┐")
+            print(f"| {base_line.ljust(width - 2)} |")
+            print(f"| {size_line.ljust(width - 2)} |")
+            print(f"| {protect_line.ljust(width - 2)} |")
+            print(f"| {alloc_prot_line.ljust(width - 2)} |")
+            print(f"└{'─' * width}┘\n")
 
 def stack_trace(stack_trace):
     """
