@@ -60,7 +60,7 @@ def get_paths_bin(path):
 
     """
 
-    path_exe = os.path.join(path,"controller","windbg", "bin", "cdb.exe")
+    path_exe = os.path.join(path, "cdb.exe")
     return path_exe
 
 def parse_modules(module_parse):
