@@ -17,7 +17,7 @@ def open_dump():
 
     path_dump = vi.get_file_path()
     appdata_path = os.getenv('APPDATA')
-    appdata_path += r"\Binary Ninja\plugins\Ninja_Dumper"
+    appdata_path += r"\Binary Ninja\dbgeng\Windows Kits\10\Debuggers\x64\"
     dbg_path = wrapper.get_paths_bin(appdata_path)
     dump_path = path_dump
     return wrapper.SubprocessController([dbg_path,'-z',dump_path]),path_dump
