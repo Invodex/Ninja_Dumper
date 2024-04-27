@@ -1,4 +1,5 @@
 # NinjaDump 🥷💾
+Quick guide --> https://twitter.com/Hachiman_Xienim/status/1779896423556821013
 
 ![Dump Functions All](images/DumpFunctionsALL.png)
 
